@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
+  /* font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif; */
   font-size: 1em;
   line-height: 1.65;
   color: #373F49;
@@ -32,9 +32,9 @@ a {
 }
 
 .wrapper {
-  width: calc(100% - 10vmin);
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 5vmin 0;
+  padding: 5vmin;
 }
 
 /**
