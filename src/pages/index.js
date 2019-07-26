@@ -92,11 +92,6 @@ export const pageQuery = graphql`
           slug
           publishDate(formatString: "MMMM Do, YYYY")
           tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-             ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
         }
       }
     }
@@ -116,6 +111,11 @@ export const pageQuery = graphql`
   }
 `
 
+// heroImage {
+//   fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+//    ...GatsbyContentfulFluid_tracedSVG
+//   }
+// }
 // file(relativePath: { eq: "nyc_trip.jpeg" }) {
 //   childImageSharp {
 //     fluid(maxWidth: 350, maxHeight: 196) {
