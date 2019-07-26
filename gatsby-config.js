@@ -10,6 +10,8 @@ const contentfulConfig = {
 }
 
 const { spaceId, accessToken } = contentfulConfig
+const channelId = process.env.CHANNEL_ID
+const apiKey = process.env.GOOGLE_API_KEY
 
 if (!spaceId || !accessToken) {
   throw new Error(
@@ -31,13 +33,13 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: path.join(__dirname, `src`, `images`),
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -47,8 +49,8 @@ module.exports = {
     {
       resolve: `gatsby-source-youtube-v2`,
       options: {
-        channelId: process.env.CHANNEL_ID,
-        apiKey: process.env.GOOGLE_API_KEY,
+        channelId,
+        apiKey,
         maxVideos: 50 // Defaults to 50
       },
     },

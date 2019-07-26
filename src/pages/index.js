@@ -16,7 +16,7 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const heroImg = get(this, 'props.data.file.childImageSharp')
+    // const heroImg = get(this, 'props.data.file.childImageSharp')
     const videos = get(this, 'props.data.allYoutubeVideo.edges')
 
     return (
@@ -61,7 +61,6 @@ class RootIndex extends React.Component {
               {videos.map(({ node }) => {
                 return (
                   <li key={node.id}>
-                    {/* <img src={node.thumbnail.url}/> */}
                     <a href={`https://youtu.be/${node.videoId}`} target='_blank'>
                       <div style={{ width: '100%', height: '200px', background: `url(${node.thumbnail.url}) no-repeat center center`, backgroundSize: 'cover', borderRadius: '10px', boxShadow: '0 4px 6px hsla(0, 0%, 0%, 0.2)'}}></div>
                       <h4>{node.title}</h4>
@@ -101,13 +100,6 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(relativePath: { eq: "nyc_trip.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 350, maxHeight: 196) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     allYoutubeVideo(limit: 3) {
       totalCount
       edges {
@@ -123,3 +115,11 @@ export const pageQuery = graphql`
     }
   }
 `
+
+// file(relativePath: { eq: "nyc_trip.jpeg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 350, maxHeight: 196) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
