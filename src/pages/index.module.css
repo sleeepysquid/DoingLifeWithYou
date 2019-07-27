@@ -27,3 +27,11 @@
 .aboutSection {
   padding: 20px;
 }
+.readMore {
+  background: #0a2f63;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+}

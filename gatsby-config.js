@@ -21,7 +21,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Contentful starter',
+    title: 'Doing Life With You',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
@@ -51,7 +51,7 @@ module.exports = {
       options: {
         channelId,
         apiKey,
-        maxVideos: 50 // Defaults to 50
+        maxVideos: 20
       },
     },
   ],

@@ -40,8 +40,8 @@ class RootIndex extends React.Component {
               <div className={styles.aboutSection}>
                 <p>We are Lawrence and Dyonna, an engaged couple taking life step by step. We thought we wanted the “American Dream” so we did everything society tells us to do. We went to college, got jobs, bought new cars, got engaged, and we even bought a house.</p>
                 <p>But then something happened.</p>
-                <Link to='/about'>
-                  <button>Read More About Us</button>
+                <Link to='/about' className={styles.readMore}>
+                  Read More About Us
                 </Link>
               </div>
             </div>

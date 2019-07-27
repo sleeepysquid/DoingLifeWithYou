@@ -1,20 +1,15 @@
 {
-  "name": "Contentful Gatsby Starter",
-  "description": "Gatsby starter for a Contentful project.",
+  "name": "Doing Life With You",
+  "description": "Doing Life With You Official Website.",
   "keywords": [
-    "contentful",
+    "doinglifewithyou",
+    "doing life with you",
+    "blog",
+    "vlog",
     "gatsby",
-    "static",
-    "ssg"
+    "static"
   ],
-  "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
+  "repository": "https://github.com/sleeepysquid/DoingLifeWithYou",
   "success_url": "/",
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-static"
-    }
-  ]
+  "buildpacks": []
 }
