@@ -18,7 +18,10 @@ class BlogIndex extends React.Component {
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           {/* <Hero data={author.node} /> */}
-          <div className={styles.hero}>Blog</div>
+          <div className={styles.hero}>
+            Blog
+            <div className="gradient-layer"></div>
+          </div>
           <div className="wrapper">
             <h2 className="section-headline">All Posts</h2>
             <ul className="article-list">

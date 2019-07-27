@@ -1,12 +1,15 @@
 .hero {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 61.8vh;
-  max-height: 400px;
+  max-height: 600px;
   background: #e1e1e1;
   font-size: 2em;
   overflow: hidden;
+  background: url('../images/nyc_trip.jpg') no-repeat center center;
+  background-size: cover;
 }
 .heroImage {
   /*
@@ -18,7 +21,7 @@
 }
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
 }
 .aboutSection {

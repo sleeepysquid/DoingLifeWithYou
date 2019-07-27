@@ -31,8 +31,7 @@ class RootIndex extends React.Component {
             ]}
           />
           <div className={styles.hero}>
-            {/* <Img className={styles.heroImage} fluid={heroImg.fluid}/> */}
-            <img src={nycImg}/>
+            <div className="gradient-layer"></div>
           </div>
           <div className="wrapper">
             <h2 className="section-headline">Allow us to introduce ourselves...</h2>

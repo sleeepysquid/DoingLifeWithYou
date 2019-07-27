@@ -1,10 +1,15 @@
 import React from 'react'
 import Layout from '../components/layout'
+import styles from './about.module.css'
 
 class AboutIndex extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
+        <div className={styles.hero}>
+            About
+            <div className="gradient-layer"></div>
+        </div>
         <div className="wrapper">
           <h2 className="section-headline">ALLOW US TO INTRODUCE OURSELVES…</h2>
           <p>We are Dyonna and Lawrence, an engaged couple taking life step by step. We thought we wanted the “American Dream” so we did everything society tells us to do. We went to college, got jobs, bought new cars, got engaged, and we even bought a house.</p>
