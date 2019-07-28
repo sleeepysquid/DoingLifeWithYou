@@ -13,6 +13,15 @@ import favicon16 from "../images/favicon16.png";
 import favicon32 from "../images/favicon32.png";
 
 class RootIndex extends React.Component {
+  constructor(props) {
+    super(props);
+    this.openForm = this.openForm.bind(this);
+  }
+
+  openForm() {
+    this.typeformEmbed.typeform.open();
+  }
+
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')

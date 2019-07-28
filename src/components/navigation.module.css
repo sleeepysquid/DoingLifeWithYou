@@ -21,6 +21,7 @@
   align-items: center;
   margin: 1em;
   font-weight: bold;
+  cursor: pointer;
 }
 .navItem a {
   text-decoration: none;
