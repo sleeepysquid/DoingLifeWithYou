@@ -45,7 +45,7 @@ class RootIndex extends React.Component {
                 </Link>
               </div>
             </div>
-            <h2 className="section-headline">Latest Posts</h2>
+            <h2 className="section-headline">Read Our Blog</h2>
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
@@ -55,7 +55,7 @@ class RootIndex extends React.Component {
                 )
               })}
             </ul>
-            <h2 className="section-headline">Latest Videos</h2>
+            <h2 className="section-headline">Watch Us On YouTube</h2>
             <ul className="article-list">
               {videos.map(({ node }) => {
                 return (
