@@ -15,7 +15,6 @@
   padding: 0;
   margin: 0;
 }
-
 .navItem {
   display: inline-flex;
   align-items: center;
@@ -26,7 +25,6 @@
 .navItem a {
   text-decoration: none;
 }
-
 .navItem a {
   color: currentColor;
 }

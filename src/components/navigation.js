@@ -26,7 +26,7 @@ class Navigation extends React.Component {
         />
         <nav role="navigation" className={styles.navbar}>
           <Link to="/">
-            <img src="/images/notexture_logo.png" style={{ maxWidth: 150 }}/>
+            <img src="/images/notexture_logo.png" style={{ maxWidth: 150, marginTop: '-20px' }}/>
           </Link>
           <ul className={styles.navList}>
             <li className={styles.navItem}>

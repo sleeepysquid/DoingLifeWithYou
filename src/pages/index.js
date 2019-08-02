@@ -25,7 +25,7 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    // const heroImg = get(this, 'props.data.file.childImageSharp')
+    const heroImg = get(this, 'props.data.file.childImageSharp.fluid') 
     const videos = get(this, 'props.data.allYoutubeVideo.edges')
 
     return (
@@ -40,6 +40,7 @@ class RootIndex extends React.Component {
             ]}
           />
           <div className={styles.hero}>
+            {/* <Img fluid={heroImg} /> */}
             <div className="gradient-layer"></div>
           </div>
           <div className="wrapper">
@@ -100,6 +101,11 @@ export const pageQuery = graphql`
           slug
           publishDate(formatString: "MMMM Do, YYYY")
           tags
+          heroImage {
+            fluid {
+              ...GatsbyContentfulFluid_tracedSVG
+            }
+          }
         }
       }
     }
@@ -116,18 +122,18 @@ export const pageQuery = graphql`
         }
       }
     }
+    file(relativePath: { eq: "nyc_trip.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
   }
 `
 
 // heroImage {
 //   fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
 //    ...GatsbyContentfulFluid_tracedSVG
-//   }
-// }
-// file(relativePath: { eq: "nyc_trip.jpeg" }) {
-//   childImageSharp {
-//     fluid(maxWidth: 350, maxHeight: 196) {
-//       ...GatsbyImageSharpFluid
-//     }
 //   }
 // }
