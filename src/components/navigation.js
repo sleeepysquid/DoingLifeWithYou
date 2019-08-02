@@ -33,7 +33,7 @@ class Navigation extends React.Component {
               <Link to="/blog/">Blog</Link>
             </li>
             <li className={styles.navItem}>
-              <a target="_blank" href="https://www.youtube.com/channel/UC41zd0suaVa-UD0C6iK285Q">YouTube</a>
+              <a href="https://www.youtube.com/channel/UC41zd0suaVa-UD0C6iK285Q" target="_blank" rel="noopener">YouTube</a>
             </li>
             <li className={styles.navItem} onClick={this.openForm}>
               Contact
