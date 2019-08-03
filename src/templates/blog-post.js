@@ -94,7 +94,7 @@ export const pageQuery = graphql`
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
         fluid {
-          ...GatsbyContentfulFluid_tracedSVG
+          ...GatsbyContentfulFluid
         }
       }
       content {
