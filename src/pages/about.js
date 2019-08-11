@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import styles from './about.module.css'
+import SignUpForm from '../components/signup-form'
 
 class AboutIndex extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class AboutIndex extends React.Component {
           <p>With Love and Appreciation,</p>
           <p>Dyonna and Lawrence</p>
         </div>
+        <SignUpForm />
       </Layout>
     )
   }

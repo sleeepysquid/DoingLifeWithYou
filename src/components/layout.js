@@ -20,7 +20,7 @@ class Template extends React.Component {
       <Container>
         <Navigation />
         {children}
-        <div style={{ height: '150px', background: '#100e17', color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <div style={{ height: '150px', background: '#0a2f63', color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
           <div>© 2019 Doing Life With You</div>
         </div>
       </Container>

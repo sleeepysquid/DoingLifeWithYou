@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 
 import heroStyles from '../components/hero.module.css'
 import blogStyles from './blog-post.module.css'
-
+import SignUpForm from '../components/signup-form'
 
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
@@ -25,15 +25,19 @@ const options = {
     [BLOCKS.EMBEDDED_ASSET]: ({ data: { target: { fields }}}) => <EmbeddedImage>{fields.file["en-US"]}</EmbeddedImage>,
     [BLOCKS.EMBEDDED_ENTRY]: ({ data: { target: { fields, sys: { contentType: { sys: { id }}} }}}) => {
       if (id === 'video') {
-        return <iframe
-          title={fields.title["en-US"]}
-          width="560"
-          height="315"
-          src={fields.url["en-US"]}
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen>
-        </iframe>
+        return (
+          <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <iframe
+              title={fields.title["en-US"]}
+              width="560"
+              height="315"
+              src={fields.url["en-US"]}
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen>
+            </iframe>
+          </div>
+        )
       }
       if (id === 'map') {
         return <iframe
@@ -62,17 +66,22 @@ class BlogPostTemplate extends React.Component {
             <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} />
             <div className="gradient-layer"></div>
           </div>
-          <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
-            <p
-              style={{
-                display: 'block',
-              }}
-            >
-              {post.publishDate}
-            </p>
+          <div className={`wrapper ${blogStyles.grid}`}>
+            <div className="blog-content">
+              <h1 className="section-headline">{post.title}</h1>
+              <p
+                style={{
+                  display: 'block',
+                }}
+              >
+                {post.publishDate}
+              </p>
 
-            { post.content && documentToReactComponents(post.content.json, options) }
+              { post.content && documentToReactComponents(post.content.json, options) }
+            </div>
+            <div className="sidebar">
+                <SignUpForm />
+            </div>
           </div>
         </div>
       </Layout>

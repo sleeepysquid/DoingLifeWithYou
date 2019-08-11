@@ -8,9 +8,10 @@ import ArticlePreview from '../components/article-preview'
 import styles from './index.module.css'
 import ourImg from '../images/lawrence_dyonna.jpg'
 import nycImg from '../images/nyc_trip.jpg'
-import favicon from "../images/favicon.ico";
-import favicon16 from "../images/favicon16.png";
-import favicon32 from "../images/favicon32.png";
+import favicon from "../images/favicon.ico"
+import favicon16 from "../images/favicon16.png"
+import favicon32 from "../images/favicon32.png"
+import SignUpForm from '../components/signup-form'
 
 class RootIndex extends React.Component {
   constructor(props) {
@@ -54,6 +55,9 @@ class RootIndex extends React.Component {
                   Read More About Us
                 </Link>
               </div>
+            </div>
+            <div style={{margin: '15px 0'}}>
+              <SignUpForm />
             </div>
             <h2 className="section-headline">Read Our Blog</h2>
             <ul className="article-list">

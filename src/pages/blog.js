@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import styles from './blog.module.css'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import SignUpForm from '../components/signup-form'
 
 class BlogIndex extends React.Component {
   render() {
@@ -33,6 +34,7 @@ class BlogIndex extends React.Component {
                 )
               })}
             </ul>
+            <SignUpForm />
           </div>
         </div>
       </Layout>

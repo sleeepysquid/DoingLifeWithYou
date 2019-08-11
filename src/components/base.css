@@ -5,7 +5,9 @@
   src: url("/avenir-400.woff2") format("woff2");
   font-display: swap;
 }
-
+.ReactTypeformEmbed {
+  height: 0% !important;
+}
 body {
   /* font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif; */
   font-size: 1em;

@@ -11,7 +11,7 @@
   background: url('../images/nyc_trip.jpg') no-repeat center center;
   background-size: cover;
 }
-.heroImage {
+.hero-image {
   /*
     Ensure golden ratio for the hero size while limiting it to some extend to
     the viewport width
@@ -24,14 +24,19 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
 }
-.aboutSection {
+.about-section {
   padding: 20px;
 }
-.readMore {
-  background: #0a2f63;
+.read-more {
+  /* background: #0a2f63; */
+  background-image: linear-gradient(to right, #e052a0, #FF3B3F);
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   padding: 10px;
   border-radius: 10px;
+}
+.read-more:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right,#30b3fe,#526bf4);
 }
