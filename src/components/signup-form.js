@@ -19,7 +19,7 @@ class SignUpForm extends React.Component {
       <h2 className={styles.header}>
         Follow our journey every step of the way
       </h2>
-      <form action="https://doinglifewithyou.us18.list-manage.com/subscribe/post" method="POST">
+      <form className={styles.subscribeForm} action="https://doinglifewithyou.us18.list-manage.com/subscribe/post" method="POST">
         <input type="hidden" name="u" value="ae0bc520f23a9515883686286" />
         <input type="hidden" name="id" value="8d58c8f146" />
 

@@ -11,7 +11,7 @@
   border-radius: 5px;
 }
 .subscribe-form {
-  
+  display: flex;
 }
 .email-input, .submit-btn {
   padding: 8px;
@@ -27,4 +27,9 @@
 .submit-btn:hover {
   cursor: pointer;
   background-image: linear-gradient(to right,#30b3fe,#526bf4);
+}
+@media only screen and (max-width: 1000px) {
+  .email-input {
+    max-width: 200px;
+  }
 }
