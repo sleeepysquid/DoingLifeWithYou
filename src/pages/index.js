@@ -87,10 +87,10 @@ class RootIndex extends Component {
               })}
             </ul>
             <h2 className="section-headline">Follow Us On Instagram</h2>
-            <div style={{ display: 'flex', flexWrap: 'nowrap', overflowX: 'auto' }} ref={this.scrollRef}>
+            <div className={ styles.scrollingWrapper } ref={this.scrollRef}>
               {instaPosts.map(({ node }) => {
                 return (
-                  <div key={node.id} className="insta-card" style={{ margin: '0 5px', flex: '0 0 auto' }}>
+                  <div key={node.id} style={{ margin: '0 5px', flex: '0 0 auto' }}>
                     <InstagramEmbed
                       url={`https://instagr.am/p/${node.id}/`}
                       maxWidth={200}

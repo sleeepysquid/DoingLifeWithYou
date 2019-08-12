@@ -40,3 +40,12 @@
   cursor: pointer;
   background-image: linear-gradient(to right,#30b3fe,#526bf4);
 }
+.scrolling-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none;
+}
