@@ -54,5 +54,11 @@ module.exports = {
         maxVideos: 20
       },
     },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `doinglifewithyou`,
+      },
+    },
   ],
 }

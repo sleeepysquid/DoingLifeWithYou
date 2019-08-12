@@ -34,8 +34,8 @@ class BlogIndex extends React.Component {
                 )
               })}
             </ul>
-            <SignUpForm />
           </div>
+          <SignUpForm />
         </div>
       </Layout>
     )

@@ -23,7 +23,7 @@ class SignUpForm extends React.Component {
         <input type="hidden" name="u" value="ae0bc520f23a9515883686286" />
         <input type="hidden" name="id" value="8d58c8f146" />
 
-        <input type="email" value={this.state.email} onChange={this.handleChange} className={styles.emailInput} autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" placeholder="Enter email address"/>
+        <input type="email" value={this.state.email} onChange={this.handleChange} className={styles.emailInput} autoCapitalize="off" autoCorrect="off" name="MERGE0" id="MERGE0" size="25" placeholder="Enter email address"/>
 
         <button type="submit" className={styles.submitBtn} name="submit" disabled={!this.state.email}>Subscribe</button>
       </form>

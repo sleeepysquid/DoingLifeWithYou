@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component, createRef } from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import get from 'lodash/get'
@@ -12,12 +12,15 @@ import favicon from "../images/favicon.ico"
 import favicon16 from "../images/favicon16.png"
 import favicon32 from "../images/favicon32.png"
 import SignUpForm from '../components/signup-form'
+import InstagramEmbed from 'react-instagram-embed';
 
-class RootIndex extends React.Component {
+class RootIndex extends Component {
   constructor(props) {
     super(props);
+    this.scrollRef = createRef()
     this.openForm = this.openForm.bind(this);
   }
+  
 
   openForm() {
     this.typeformEmbed.typeform.open();
@@ -28,6 +31,7 @@ class RootIndex extends React.Component {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const heroImg = get(this, 'props.data.file.childImageSharp.fluid') 
     const videos = get(this, 'props.data.allYoutubeVideo.edges')
+    const instaPosts = get(this, 'props.data.allInstaNode.edges')
 
     return (
       <Layout location={this.props.location} >
@@ -82,6 +86,27 @@ class RootIndex extends React.Component {
                 )
               })}
             </ul>
+            <h2 className="section-headline">Follow Us On Instagram</h2>
+            <div style={{ display: 'flex', flexWrap: 'nowrap', overflowX: 'auto' }} ref={this.scrollRef}>
+              {instaPosts.map(({ node }) => {
+                return (
+                  <div key={node.id} className="insta-card" style={{ margin: '0 5px', flex: '0 0 auto' }}>
+                    <InstagramEmbed
+                      url={`https://instagr.am/p/${node.id}/`}
+                      maxWidth={200}
+                      hideCaption={true}
+                      containerTagName='div'
+                      protocol=''
+                      injectScript
+                      onLoading={() => {}}
+                      onSuccess={() => {}}
+                      onAfterRender={() => { this.scrollRef.current.scrollBy(50, 0) }}
+                      onFailure={() => {}}
+                    />
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
       </Layout>
@@ -130,6 +155,13 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(maxWidth: 700) {
           ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    allInstaNode(filter: {mediaType: { eq: "GraphImage"}}, limit: 6){
+      edges {
+        node {
+          id
         }
       }
     }
