@@ -83,7 +83,7 @@ class BlogPostTemplate extends React.Component {
                   display: 'block',
                 }}
               >
-                {post.publishDate}
+                By {post.author.name}
               </p>
 
               { post.content && documentToReactComponents(post.content.json, options) }
@@ -113,6 +113,9 @@ export const pageQuery = graphql`
       title
       slug
       publishDate(formatString: "MMMM Do, YYYY")
+      author {
+        name
+      }
       heroImage {
         fluid {
           ...GatsbyContentfulFluid
