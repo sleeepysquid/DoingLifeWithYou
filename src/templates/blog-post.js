@@ -67,8 +67,6 @@ class BlogPostTemplate extends React.Component {
       },
      }
 
-     console.log(process.env.GATSBY_DISQUS_NAME);
-
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
