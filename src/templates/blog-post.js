@@ -62,11 +62,12 @@ class BlogPostTemplate extends React.Component {
     const disqusConfig = {
       shortname: process.env.GATSBY_DISQUS_NAME,
       config: {
-        url: `https://doinglifewithyou/blog/${post.slug}`,
         identifier: post.slug,
         title: post.title 
       },
      }
+
+     console.log(process.env.GATSBY_DISQUS_NAME);
 
     return (
       <Layout location={this.props.location} >
