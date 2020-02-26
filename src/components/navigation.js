@@ -44,6 +44,7 @@ class Navigation extends React.Component {
           </Link>
           <div className={styles.navList}>
               <Link className={styles.navItem} to="/blog/">Blog</Link>
+              <Link className={styles.navItem} to="/gear/">Gear</Link>
               <a className={styles.navItem} href="https://www.youtube.com/channel/UC41zd0suaVa-UD0C6iK285Q" target="_blank" rel="noopener">YouTube</a>
               <a className={styles.navItem} href="javascript:void(0);" onClick={this.openForm}>Contact</a>
               <a className={`${styles.navItem} ${styles.navToggle}` } href="javascript:void(0);" onClick={this.openNavbar}>

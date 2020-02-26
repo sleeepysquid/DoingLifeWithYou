@@ -29,6 +29,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
+    `gatsby-remark-responsive-iframe`,
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
