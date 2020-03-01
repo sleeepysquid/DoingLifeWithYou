@@ -22,6 +22,7 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Doing Life With You',
+    siteUrl: `https://doinglifewithyou.com`,
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
@@ -30,6 +31,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     `gatsby-remark-responsive-iframe`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
