@@ -4,13 +4,32 @@ import styles from './signup-form.module.css'
 class SignUpForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {email : ''}
+    this.state = {email_address : '', first_name: ''}
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange = (e) =>{ 
-    this.setState({email: e.target.value});
+  handleInputChange = (e) =>{ 
+    this.setState({email_address: e.target.value});
+  }
+
+  handleSubmit = event => {
+    event.preventDefault()
+    // action="https://app.convertkit.com/forms/1246803/subscriptions" method="POST"
+
+    fetch(
+      `https://app.convertkit.com/forms/1246803/subscriptions`,
+      {
+        method: 'post',
+        body: JSON.stringify(this.state, null, 2),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      },
+    ).then(response => console.log(response))
+    alert(`Welcome ${this.state.email_address}!`)
   }
 
   render() {
@@ -19,13 +38,12 @@ class SignUpForm extends React.Component {
       <h2 className={styles.header}>
         Follow our journey every step of the way
       </h2>
-      <form className={styles.subscribeForm} action="https://doinglifewithyou.us18.list-manage.com/subscribe/post" method="POST">
-        <input type="hidden" name="u" value="ae0bc520f23a9515883686286" />
-        <input type="hidden" name="id" value="8d58c8f146" />
+      <form className={styles.subscribeForm} onSubmit={this.handleSubmit}>
+        {/* <input type="hidden" name="first_name" value="Lawrence" /> */}
 
-        <input type="email" value={this.state.email} onChange={this.handleChange} className={styles.emailInput} autoCapitalize="off" autoCorrect="off" name="MERGE0" id="MERGE0" size="25" placeholder="Enter email address"/>
+        <input type="email" name="email_address" value={this.state.email_address} onChange={this.handleInputChange} className={styles.emailInput} autoCapitalize="off" autoCorrect="off" size="25" placeholder="Enter email address"/>
 
-        <button type="submit" className={styles.submitBtn} name="submit" disabled={!this.state.email}>Subscribe</button>
+        <button type="submit" className={styles.submitBtn} disabled={!this.state.email_address}>Subscribe</button>
       </form>
     </div>
 
