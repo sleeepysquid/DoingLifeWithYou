@@ -8,12 +8,11 @@ class AboutIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div className={styles.hero}>
-            About
             <div className="gradient-layer"></div>
         </div>
         <div className="wrapper">
           <h2 className="section-headline">ALLOW US TO INTRODUCE OURSELVES…</h2>
-          <p>We are Dyonna and Lawrence, an engaged couple taking life step by step. We thought we wanted the “American Dream” so we did everything society tells us to do. We went to college, got jobs, bought new cars, got engaged, and we even bought a house.</p>
+          <p>We are Dyonna and Lawrence, an married couple taking life step by step. We thought we wanted the “American Dream” so we did everything society tells us to do. We went to college, got jobs, bought new cars, got married, and we even bought a house.</p>
           <p>But then something happened...</p>
           <p>We realized that life is extremely short, especially since you only get one try. So we decided we would start taking chances, stepping out of our comfort zones, and enjoying whatever rollercoaster God throws our way. We know that there are always a few scary drops along the way, but in the end the ride is always worth it.</p>
           <p><b>The biggest realization of all…</b></p>

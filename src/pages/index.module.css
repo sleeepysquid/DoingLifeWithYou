@@ -8,8 +8,9 @@
   background: #e1e1e1;
   font-size: 2em;
   overflow: hidden;
-  background: url('../images/nyc_trip.jpg') no-repeat center center;
+  background: url('../images/desert.jpg') no-repeat center center;
   background-size: cover;
+  background-position: 50% 25%;
 }
 .hero-image {
   /*

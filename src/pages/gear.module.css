@@ -4,10 +4,13 @@
   justify-content: center;
   align-items: center;
   height: 61.8vh;
-  max-height: 400px;
+  max-height: 600px;
   background: #e1e1e1;
   font-size: 2em;
   overflow: hidden;
+  background: url('../images/gear.jpg') no-repeat center center;
+  background-size: cover;
+  background-position: 50% 70%;
 }
 .gear {
   display: block;

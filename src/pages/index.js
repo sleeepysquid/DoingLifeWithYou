@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import styles from './index.module.css'
-import ourImg from '../images/lawrence_dyonna.jpg'
+import ourImg from '../images/washington_dc.jpg'
 import nycImg from '../images/nyc_trip.jpg'
 import favicon from "../images/favicon.ico"
 import favicon16 from "../images/favicon16.png"
@@ -53,7 +53,7 @@ class RootIndex extends Component {
             <div className={styles.container}>
                 <img src={ourImg} style={{ borderRadius: '10px', boxShadow: '0 4px 6px hsla(0, 0%, 0%, 0.2)'}}/>
               <div className={styles.aboutSection}>
-                <p>We are Lawrence and Dyonna, a married couple taking life step by step. We thought we wanted the “American Dream” so we did everything society tells us to do. We went to college, got jobs, bought new cars, got married, and we even bought a house.</p>
+                <p>We are Dyonna and Lawrence, a married couple taking life step by step. We thought we wanted the “American Dream” so we did everything society tells us to do. We went to college, got jobs, bought new cars, got married, and we even bought a house.</p>
                 <p>But then something happened.</p>
                 <Link to='/about' className={styles.readMore}>
                   Read More About Us
