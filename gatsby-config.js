@@ -63,5 +63,11 @@ module.exports = {
         username: `doinglifewithyou`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-158094237-1",
+      },
+    },
   ],
 }
