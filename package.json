@@ -16,7 +16,7 @@
     "gatsby-remark-responsive-iframe": "^2.2.32",
     "gatsby-source-contentful": "^2.0.48",
     "gatsby-source-filesystem": "^2.1.6",
-    "gatsby-source-instagram": "^0.5.1",
+    "gatsby-source-instagram": "^0.8.0",
     "gatsby-source-youtube-v2": "^1.0.1",
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.1.18",
