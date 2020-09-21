@@ -1,5 +1,14 @@
 .previewTitle {
-  font-size: 1.3em;
+  font-size: 1.2em;
+  background-color: #000000b8;
+  color: #fff; 
+  display: inline;
+  text-align: center;
+  margin: 10px !important;
+  padding: 5px;
+  
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .tag {

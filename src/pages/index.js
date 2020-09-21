@@ -63,7 +63,7 @@ class RootIndex extends Component {
             <div style={{margin: '15px 0'}}>
               <SignUpForm />
             </div>
-            <h2 className="section-headline">Read Our Blog</h2>
+            <h2 className="section-headline">Recent Posts</h2>
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
@@ -73,7 +73,7 @@ class RootIndex extends Component {
                 )
               })}
             </ul>
-            <h2 className="section-headline">Watch Us On YouTube</h2>
+            {/* <h2 className="section-headline">Watch Us On YouTube</h2>
             <ul className="article-list">
               {videos.map(({ node }) => {
                 return (
@@ -85,7 +85,7 @@ class RootIndex extends Component {
                   </li>
                 )
               })}
-            </ul>
+            </ul> */}
             <h2 className="section-headline">Follow Us On Instagram</h2>
             <div className={ styles.scrollingWrapper } ref={this.scrollRef}>
               {instaPosts.map(({ node }) => {
@@ -123,7 +123,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }, limit: 3) {
+    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }, limit: 6) {
       edges {
         node {
           title
