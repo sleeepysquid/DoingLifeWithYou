@@ -69,5 +69,12 @@ module.exports = {
         trackingId: "UA-158094237-1",
       },
     },
+    {
+      resolve: "@sentry/gatsby",
+      options: {
+        dsn: "https://60e3d15cb19249b195d4b24d36166503@o515326.ingest.sentry.io/5619974",
+        sampleRate: 0.7,
+      },
+    },
   ],
 }
