@@ -29,7 +29,7 @@ class RootIndex extends Component {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const heroImg = get(this, 'props.data.file.childImageSharp.fluid')
     const videos = get(this, 'props.data.allYoutubeVideo.edges')
-    const instaPosts = get(this, 'props.data.allInstaNode.edges')
+    // const instaPosts = get(this, 'props.data.allInstaNode.edges')
 
     return (
       <Layout location={this.props.location}>
@@ -124,7 +124,7 @@ class RootIndex extends Component {
                 )
               })}
             </ul>
-            <h2 className="section-headline">Follow Us On Instagram</h2>
+            {/* <h2 className="section-headline">Follow Us On Instagram</h2>
             <div className={styles.scrollingWrapper}>
               {instaPosts.map(({ node }) => {
                 return (
@@ -142,7 +142,7 @@ class RootIndex extends Component {
                   </div>
                 )
               })}
-            </div>
+            </div> */}
           </div>
         </div>
       </Layout>
@@ -197,13 +197,14 @@ export const pageQuery = graphql`
         }
       }
     }
-    allInstaNode(filter: { mediaType: { eq: "GraphImage" } }, limit: 10) {
-      edges {
-        node {
-          id
-          original
-        }
-      }
-    }
   }
 `
+
+// allInstaNode(filter: { mediaType: { eq: "GraphImage" } }, limit: 10) {
+//   edges {
+//     node {
+//       id
+//       original
+//     }
+//   }
+// }
