@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/timeframe"
+  from = "/timeframe/*"
   to = "https://adoring-minsky-d829fb.netlify.app"
   status = 200
   force = true
