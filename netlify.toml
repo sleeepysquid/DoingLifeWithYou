@@ -2,4 +2,4 @@
   from = "/timeframe"
   to = "https://adoring-minsky-d829fb.netlify.app"
   status = 200
-  force = false
+  force = true
